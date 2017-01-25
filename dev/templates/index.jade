@@ -1,16 +1,109 @@
 extends _layout
+block vars
+	- var bodyClass = 'home'
 block content
-	main.main-content
-		.sprite-example
-			h2.heading Sprite example
-			i.facebook-logo__icon
-			i.google-plus-logo__icon
-			i.instagram-logo__icon
-			i.twitter-logo__icon
-			i.youtube-logo__icon
-		.author-git
-			h2 Github link
-			a(href="https://github.com/narek-t/gulp-jade-sass" target="_blank") https://github.com/narek-t/gulp-jade-sass
+	main.main-content.cf
+		.home-slider
+			.container
+				.home-slider__wrapper
+					.home-slider__item(style="background-image: url(img/slide-graph.png)" data-text="выполнения требований Закона")
+						.home-slider__inner
+							.home-slider__inner-wrap
+								p.heading Опыт использования
+								p.description Опыт внедрения ПАК «Телемедик» на предприятиях демонстрирует снижение числа недопуска работников с 45 % в первый месяц до 0 %, в течении года.
+								a.view-more-link(href="#") ПОДРОБНЕЕ
+					.home-slider__item(style="background-image: url(img/slide2.png)" data-text="Автоматическое сохранение данных")
+						.home-slider__inner
+							.home-slider__inner-wrap
+								p.heading Опыт использования
+								p.description Опыт внедрения ПАК «Телемедик» на предприятиях демонстрирует снижение числа недопуска работников с 45 % в первый месяц до 0 %, в течении года.
+								a.view-more-link(href="#") ПОДРОБНЕЕ
+					.home-slider__item(style="background-image: url(img/slide-graph.png)" data-text="Опыт использования")
+						.home-slider__inner
+							.home-slider__inner-wrap
+								p.heading Опыт использования
+								p.description Опыт внедрения ПАК «Телемедик» на предприятиях демонстрирует снижение числа недопуска работников с 45 % в первый месяц до 0 %, в течении года.
+								a.view-more-link(href="#") ПОДРОБНЕЕ
+					.home-slider__item(style="background-image: url(img/slide2.png)" data-text="Осмотр в строго заданное время")
+						.home-slider__inner
+							.home-slider__inner-wrap
+								p.heading Опыт использования
+								p.description Опыт внедрения ПАК «Телемедик» на предприятиях демонстрирует снижение числа недопуска работников с 45 % в первый месяц до 0 %, в течении года.
+								a.view-more-link(href="#") ПОДРОБНЕЕ
+					.home-slider__item(style="background-image: url(img/slide-graph.png)" data-text="Сокращение финансовых затрат")
+						.home-slider__inner
+							.home-slider__inner-wrap
+								p.heading Опыт использования
+								p.description Опыт внедрения ПАК «Телемедик» на предприятиях демонстрирует снижение числа недопуска работников с 45 % в первый месяц до 0 %, в течении года.
+								a.view-more-link(href="#") ПОДРОБНЕЕ
+		.home-benefits
+			.container
+				.home-benefits__inner
+					.home-benefits__item
+						.home-benefits__item--inner(style="background-image: url(img/ben1.png)")
+							p.heading Удалённый контроль процесса
+							p.description Предоставляем дистанционный предрейсовый, предсменный и послерейсовый, послесменный медосмотр посредством использования программно-аппаратного комплекса Телемедик в соответствии с законодательством.
+					.home-benefits__item
+						.home-benefits__item--inner(style="background-image: url(img/ben2.png)")
+							p.heading Круглосуточное обслуживание
+							p.description Обеспечиваем предоставление услуг по предрейсовым, предсменным и послерейсовым, послесменным медосмотрам 24 часа в сутки 365 дней в году вне зависимости от местонахождения точек выпуска водителей.
+					.home-benefits__item
+						.home-benefits__item--inner(style="background-image: url(img/ben3.png)")
+							p.heading Положительный опыт работы
+							p.description Мы на протяжении четырех лет успешно используем и внедряем телемедицинские технологии дистанционных медицинских услуг, и работает с крупнейшими предприятиями Москвы.
+		.how-works
+			.container
+				.how-works__inner
+					.how-works--col
+					.how-works--col.text-col
+						p.heading Как это работает?
+						ul.how__list
+							li Терминалы ПАК «Телемедик» устанавливается на точке выпуска водителей
+							li Водитель садится за терминал, авторизируется и проходит медосмотр согласно инструкции и указаниям на экране монитора
+							li Данные результатов медосмотра передаются в электронный кабинет врача
+							li Врач идентифицирует водителя. Согласно показателям здоровья допускает или не допускает водителя в рейс. Свое решение врач подписывает ЭЦП
+							li В случае допуска  информация о прохождении медосмотра экспортируется в систему формирования и печати путевых листов
+							li В случае не допуска, на электронную почту ответственного лица предприятия приходит письмо с направлением в поликлинику
+		.home-blog
+			.container
+				.home-blog__inner.cf
+					.home-blog__inner-big
+						.home-blog__inner-big--img(style="background-image: url(img/blog-big.png)")
+						.home-blog__inner-big--col
+							p.heading БЛОГ
+							a.title(href="#") Разнообразный и богатый опыт консультация с широким активом
+							span.date 26.12.2016 
+							p Таким образом консультация с широким активом способствует подготовки и реализации направлений прогрессивного развития. 
+							p Разнообразный и богатый опыт новая модель организационной деятельности в зна  существенных финансовых и административных условий. чительной степени обуславливает создание существенных финансовых и административных условий.
+							.view-more-link
+								a(href="#") Подробнее
+					.home-blog__inner-small
+						p.heading Последние посты
+						.small-items
+							.small-item.cf
+								a.full-link(href="#")
+								.img-side
+									img(src="img/small-img.png", alt="")
+								.text-side
+									p.title(href="#") Начало повседневной работы по формированию...
+									p.description Разнообразный и богатый опыт новая модель организационной 
+							.small-item.cf
+								a.full-link(href="#")
+								.img-side
+									img(src="img/small-img.png", alt="")
+								.text-side
+									p.title(href="#") Начало повседневной работы по формированию...
+									p.description Разнообразный и богатый опыт новая модель организационной 
+							.small-item.cf
+								a.full-link(href="#")
+								.img-side
+									img(src="img/small-img.png", alt="")
+								.text-side
+									p.title(href="#") Начало повседневной работы по формированию...
+									p.description Разнообразный и богатый опыт новая модель организационной 
+
+
+
 
 
 

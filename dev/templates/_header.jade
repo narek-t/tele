@@ -1,4 +1,33 @@
 block header
-
 	header.site-header
-		h1 Blank template for frontend developers
+		.header__top
+			.container.cf
+				ul.header__top-list
+					li
+						a(href="#") Личный кабинет
+					li
+						select
+							option(value="") РУ
+							option(value="") EN
+					li.social__share
+						a.vk(href="#")
+						a.fb(href="#")
+						a.ok(href="#")
+						a.twit(href="#")
+		.header__inner
+			.container.cf
+				a.logo(href="#")
+					img(src="img/logo.png", alt="")
+				ul.main-nav
+					li.current-menu-item
+						a(href="#") Принцип работы
+					li
+						a(href="#") Партнёрам
+					li
+						a(href="#") Блог
+					li
+						a(href="#") Карта технологий
+					li
+						a(href="#") Контакты
+				a.header__tel(href="tel:8 (495) 532-1030") 8 (495) 532-1030
+
