@@ -1,0 +1,78 @@
+extends _layout
+block vars
+	- var bodyClass = 'blog'
+block content
+	main.main-content.cf
+		.container
+			.main-content__inner
+				.content
+					ul.blog__list
+						li.blog__list-item
+							.img-side(style="background-image: url(img/big-img.png)")
+							.text-side
+								a.title(href="#") Разнообразный и богатый опыт консультация с широким активом
+								span.date 26.12.2016 
+								p.description Таким образом консультация с широким активом способствует подготовки и реализации направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности в значительной 
+								.view-more-link
+									a(href="#") Подробнее
+						li.blog__list-item
+							.img-side(style="background-image: url(img/small-blog-img.png)")
+							.text-side
+								a.title(href="#") Разнообразный и богатый опыт консультация с широким активом
+								span.date 26.12.2016 
+								p.description Таким образом консультация с широким активом способствует подготовки и реализации направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности в значительной 
+								.view-more-link
+									a(href="#") Подробнее
+						li.blog__list-item
+							.img-side(style="background-image: url(img/big-img.png)")
+							.text-side
+								a.title(href="#") Разнообразный и богатый опыт консультация с широким активом
+								span.date 26.12.2016 
+								p.description Таким образом консультация с широким активом способствует подготовки и реализации направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности в значительной 
+								.view-more-link
+									a(href="#") Подробнее
+						li.blog__list-item
+							.img-side(style="background-image: url(img/small-blog-img.png)")
+							.text-side
+								a.title(href="#") Разнообразный и богатый опыт консультация с широким активом
+								span.date 26.12.2016 
+								p.description Таким образом консультация с широким активом способствует подготовки и реализации направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности в значительной 
+								.view-more-link
+									a(href="#") Подробнее
+				aside.sidebar
+					.categories
+						p.heading категории
+						ul.cat__list.cf
+							li
+								a(href="#") Название категории 1
+							li
+								a(href="#") Название категории 2
+							li.current-menu-item
+								a(href="#") Название категории 3
+							li
+								a(href="#") Название категории 4
+							li
+								a(href="#") Название категории 5
+							li
+								a(href="#") Название категории 6
+							li
+								a(href="#") Название категории 7
+					.widget-area
+						img(src="img/fb-widget.png", alt="" style="display: block; max-width: 100%; height: auto")
+					.sidebar__form
+						.small-form
+							p.heading Заказать звонок
+							form
+								input.text-box(type="text" placeholder="Имя")
+								input.text-box(type="tel" placeholder="Телефон")
+								.send-btn-wrap
+									input.send-btn(type="submit" value="Отправить")
+
+
+
+
+
+
+
+
+block inlineScripts
