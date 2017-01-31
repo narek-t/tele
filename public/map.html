@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600&amp;amp;subset=cyrillic"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>Document</title>
+  </head>
+  <body class="blog">
+    <div class="all-wrapper">
+      <header class="site-header">
+        <div class="header__top">
+          <div class="container cf">
+            <ul class="header__top-list">
+              <li><a href="#">Личный кабинет</a></li>
+              <li>
+                <select>
+                  <option value="">РУ</option>
+                  <option value="">EN</option>
+                </select>
+              </li>
+              <li class="social__share"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="#" class="ok"></a><a href="#" class="twit"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__inner">
+          <div class="container cf"><a href="#" class="logo"><img src="img/logo.png" alt=""/></a>
+            <ul class="main-nav">
+              <li class="current-menu-item"><a href="#">Принцип работы</a></li>
+              <li><a href="#">Партнёрам</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Карта технологий</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul><a href="tel:8 (495) 532-1030" class="header__tel">8 (495) 532-1030</a>
+          </div>
+        </div>
+      </header>
+      <main class="main-content cf">
+        <div class="container">
+          <div class="main-content__inner">
+            <div class="map-area">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+          <ul class="footer-top__list">
+            <li class="loc">127254, г. Москва, ул. Добролюбова, 3, стр.1</li>
+            <li class="tel"><a href="tel:8 (495) 532-10-30">8 (495) 532-10-30</a></li>
+            <li class="email"><a href="mailto:telemedservice@mail.ru">telemedservice@mail.ru</a></li>
+            <li class="social">
+              <p>Присоединяйтесь к нам:</p>
+              <p class="social__share"><a href="#" class="vk"></a><a href="#" class="fb"></a><a href="#" class="ok"></a><a href="#" class="twit"></a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container cf">
+          <p class="copyright">© 2016 Общество с ограниченной ответственностью «Аркан». Все права защищены.</p>
+          <p class="made-in">Разработка сайта: <a href="#" target="_blank">Beluga Labs</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/lib/lib.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+      ymaps.ready(init);
+      
+      function init () {
+      	var myMap = new ymaps.Map("map", {
+      		center: [55.6938,37.6001],
+      		zoom: 5,
+      		controls: [],
+      	}); 
+      	var myGeoObjects = [];
+      
+      	myGeoObjects[0] = new ymaps.Placemark([55.6740,37.7333],{
+      		clusterCaption: 'Moscow', 
+      		//balloonContentBody: 'Текст в балуне',
+      		},{
+      		// Необходимо указать данный тип макета.
+      		iconLayout: 'default#image',
+      		iconImageHref: 'img/map-green.png',
+      		// Размеры метки.
+      		iconImageSize: [28, 42],
+      		// Смещение левого верхнего угла иконки относительно
+      		// её «ножки» (точки привязки).
+      		//- iconImageOffset: [-3, -42]
+      	});
+      
+      	myGeoObjects[1] = new ymaps.Placemark([55.6990,37.7377],{
+      		clusterCaption: 'Moscow', 
+      		//balloonContentBody: 'Текст в балуне',
+      		},{
+      		// Необходимо указать данный тип макета.
+      		iconLayout: 'default#image',
+      		iconImageHref: 'img/map-green.png',
+      		// Размеры метки.
+      		iconImageSize: [28, 42],
+      		// Смещение левого верхнего угла иконки относительно
+      		// её «ножки» (точки привязки).
+      		//- iconImageOffset: [-23, -42]
+      	});
+      
+      
+      	myGeoObjects[2] = new ymaps.Placemark([56.299278725518555,43.99715184918819],{
+      		clusterCaption: 'Gorky', 
+      		//balloonContentBody: 'Текст в балуне',
+      		},{
+      		// Необходимо указать данный тип макета.
+      		iconLayout: 'default#image',
+      		iconImageHref: 'img/map-green.png',
+      		// Размеры метки.
+      		iconImageSize: [28, 42],
+      		// Смещение левого верхнего угла иконки относительно
+      		// её «ножки» (точки привязки).
+      		//- iconImageOffset: [-3, -42]
+      	});
+      
+      	myGeoObjects[3] = new ymaps.Placemark([56.30080581135179,43.92574071637571],{
+      		clusterCaption: 'Gorky', 
+      		//- balloonContentBody: 'Текст в балуне',
+      		},{
+      		iconLayout: 'default#image',
+      		iconImageHref: 'img/map-green.png',
+      		iconImageSize: [28, 42],
+      	});
+      
+      	var clusterIcons=[{
+      		href:'/images/pointer.png',
+      		size:[31,40],
+      		offset:[0,0]
+      	}];
+      
+      	clusterer = new ymaps.Clusterer();
+      
+      	clusterer.createCluster = function(center, geoObjects) {
+      		var cluster = ymaps.Clusterer.prototype.createCluster.call(this, center, geoObjects);
+      		cluster.properties.set({
+      			//- city: 'Москва'
+      		});
+      		cluster.events.add('click', function(e) {
+      			//console.log(cluster.properties._data.city)
+      			var x = cluster.properties._data.geoObjects[0].properties._data.clusterCaption;
+      			window.location.hash = x;
+      		});
+      		return cluster;
+      	};
+      
+      
+      	//- var clusterer = new ymaps.Clusterer({
+      	//- 	clusterDisableClickZoom: false,
+      	//- 	clusterOpenBalloonOnClick: false,
+      	//- 	//- clusterIcons:clusterIcons,
+      	//- 	// Устанавливаем стандартный макет балуна кластера "Карусель".
+      	//- 	clusterBalloonContentLayout: 'cluster#balloonCarousel',
+      	//- 	// Устанавливаем собственный макет.
+      	//- 	//clusterBalloonItemContentLayout: customItemContentLayout,
+      	//- 	// Устанавливаем режим открытия балуна. 
+      	//- 	// В данном примере балун никогда не будет открываться в режиме панели.
+      	//- 	clusterBalloonPanelMaxMapArea: 0,
+      	//- 	// Устанавливаем размеры макета контента балуна (в пикселях).
+      	//- 	clusterBalloonContentLayoutWidth: 300,
+      	//- 	clusterBalloonContentLayoutHeight: 200,
+      	//- 	// Устанавливаем максимальное количество элементов в нижней панели на одной странице
+      	//- 	clusterBalloonPagerSize: 5,
+      	//- 	// Настройка внешего вида нижней панели.
+      	//- 	// Режим marker рекомендуется использовать с небольшим количеством элементов.
+      	//- 	// clusterBalloonPagerType: 'marker',
+      	//- 	// Можно отключить зацикливание списка при навигации при помощи боковых стрелок.
+      	//- 	// clusterBalloonCycling: false,
+      	//- 	// Можно отключить отображение меню навигации.
+      	//- 	// clusterBalloonPagerVisible: false
+      	//- });
+      
+      	
+      	clusterer.add(myGeoObjects);
+      	myMap.geoObjects.add(clusterer);
+      }
+    </script>
+  </body>
+</html>
